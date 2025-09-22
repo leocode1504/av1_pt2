@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card de Filme/Série</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg,#0f1724 0%, #0b1220 100%);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .card {
+      width: 100%;
+      background-color: #111827;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(2,6,23,0.6);
+      overflow: hidden;
+      color: #fff;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(2,6,23,0.75);
+    }
+
+    .card img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-info {
+      padding: 14px 16px 18px 16px;
+    }
+
+    .card-info h2 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      line-height: 1.15;
+    }
+
+    .card-info p {
+      font-size: 13px;
+      margin-bottom: 8px;
+      color: #cbd5e1;
+    }
+
+    .card-info .nota {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      background: rgba(255,204,51,0.08);
+      color: #ff0000;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,205,70,0.12);
+    }
+
+    @media (max-width: 420px) {
+      .card img { height: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cards-container">
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/8/88/The_Crimson_Ghost_poster.jpg" alt="Capa The Crimson Ghost">
+      <div class="card-info">
+        <h2>The Crimson Ghost</h2>
+        <p>Ano: 1946 | Gênero: Aventura / Serial</p>
+        <span class="nota">Nota: 6.8/10</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/d/db/Donnie_Darko_poster.jpg" alt="Capa Donnie Darko">
+      <div class="card-info">
+        <h2>Donnie Darko</h2>
+        <p>Ano: 2001 | Gênero: Drama / Ficção Científica</p>
+        <span class="nota">Nota: 8.0/10</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/pt/2/23/Nosferatu.jpg" alt="Capa Nosferatu">
+      <div class="card-info">
+        <h2>Nosferatu</h2>
+        <p>Ano: 1922 | Gênero: Horror Expressionista</p>
+        <span class="nota">Nota: 7.9/10</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTURv-aQh4v9rVFRZ1MAE-od43BfCs3JQmfNG0QLHhgkq0riVob" alt="Capa A Nightmare on Elm Street">
+      <div class="card-info">
+        <h2>A Nightmare on Elm Street</h2>
+        <p>Ano: 1984 | Gênero: Terror / Slasher</p>
+        <span class="nota">Nota: 7.5/10</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
